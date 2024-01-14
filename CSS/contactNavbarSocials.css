@@ -1,0 +1,131 @@
+:root {
+    --black: rgb(39, 33, 33);
+    --gray: rgb(54, 51, 51);
+    --light-pink: rgb(246, 233, 233);
+    --orange: rgb(225, 100, 40);
+    --yellow: rgb(254, 207, 2);
+}
+
+h1 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 3.5rem;
+}
+
+p .navContainer {
+    margin-top: 80px;
+    color: var(--light-pink);
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+nav {
+    height: 130px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--black);
+    /* border: 1px solid violet; */
+    box-shadow: 4px 4px 10px var(--orange);
+    z-index: 3;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    color: var(--orange);
+    font-family: "Fjalla One", sans-serif;
+    height: 110px;
+    width: 200px;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+nav {
+    background-image: url(/img/navbarBg.png);
+}
+
+#navbarLogo {
+    margin-top: 5px;
+    height: 100px;
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#socialsIcons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-80%);
+}
+
+.socialsIcons {
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.socialsIcons:hover {
+    transition: 0.3s;
+}
+
+#socialsFb {
+    background-image: url(../img/facebook.png);
+}
+
+#socialsFb:hover {
+    background-image: url(../img/facebookHover.png);
+}
+
+#socialsInsta {
+    background-image: url(../img/instagram.png);
+}
+
+#socialsInsta:hover {
+    background-image: url(../img/instagramHover.png);
+}
+
+#socialsTwitter {
+    background-image: url(../img/twitter.png);
+}
+
+#socialsTwitter:hover {
+    background-image: url(../img/twitterHover.png);
+}
+
+#socialsGh {
+    background-image: url(../img/github.png);
+}
+
+#socialsGh:hover {
+    background-image: url(../img/githubHover.png);
+}
+
+.navButtons {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+}
+
+.navButtons:hover {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+    cursor: pointer;
+}

@@ -1,0 +1,184 @@
+/* Colors we use */
+:root {
+    --black: rgb(39, 33, 33);
+    --cyberYellow: rgb(254, 207, 2);
+    --gray: rgb(54, 51, 51);
+    --lightOrange: rgb(225, 100, 37, 0.55);
+    --lightPink: rgb(246, 233, 233);
+    --orange: rgb(225, 100, 40);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: 1000%;
+    background: radial-gradient(var(--gray), var(--black));
+    font-family: "Quicksand", sans-serif;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(fonts/quicksand-Light.ttf);
+}
+
+@font-face {
+    font-family: fjallaone;
+    src: url(fonts/fjallaOne-Regular.ttf);
+}
+
+/* Header image // Johannes */
+
+#contactHeader {
+    background-image: url(../img/ContactImage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: -1px -1px 10px var(--orange);
+    width: 100vw;
+    height: 300px;
+}
+
+/* Containers with flip cards // Victoria */
+
+.flexContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.flexContainerTwo {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Container with image of map // Victoria */
+.mapContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    min-width: 100vw;
+    padding-bottom: 12.5rem;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+}
+
+.mapImage {
+    align-items: center;
+    border-bottom: 0.125rem solid var(--orange);
+    border-top: 0.125rem solid var(--orange);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.mapContainer h1 {
+    color: var(--lightPink);
+}
+
+.contactContainer {
+    display: flex;
+    position: absolute;
+}
+
+/* Card design // Victoria */
+
+.card {
+    perspective: 62.5rem;
+    position: relative;
+    border-radius: 1.25rem;
+    width: 13.75rem;
+    height: 19.188rem;
+    text-align: center;
+    margin: 1.25rem;
+    margin-top: 5.625rem;
+}
+
+.card-content {
+    border: 0.063rem solid var(--orange);
+    border-radius: 1.25rem;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url("img/navbarBg.png");
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.cardImg {
+    border: 0.063rem solid var(--orange);
+    width: 7.5rem;
+    height: 7.5rem;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: -3.75rem auto 0;
+    position: relative;
+}
+
+.card-body {
+    padding: 0.438rem;
+}
+
+.card-body h3 {
+    font-family: FjallaOne-regular;
+    color: var(--cyberYellow);
+    text-shadow: 1px 1px var(--black);
+}
+
+.card-body p {
+    font-family: quicksand;
+    color: var(--lightPink);
+}
+
+/* Button for "Book Now" // Victoria */
+.btn,
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.938rem 1rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn {
+    background-color: var(--black);
+    color: var(--orange);
+}

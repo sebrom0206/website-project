@@ -1,0 +1,662 @@
+:root {
+    --black: rgb(39, 33, 33);
+    --gray: rgb(54, 51, 51);
+    --light-pink: rgb(246, 233, 233);
+    --orange: rgb(225, 100, 40);
+    --yellow: rgb(254, 207, 2);
+}
+
+@font-face {
+    font-family: fjallaone;
+    src: url(fonts/fjallaone.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(fonts/quicksand.ttf);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: quicksand;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: auto;
+    /* max-width: 75rem; */
+    padding: 0 0;
+}
+
+/* Header bilder // Johannes */
+#homeHeader {
+    box-shadow: -1px -1px 10px var(--orange);
+    background-image: url(../img/Home1.png);
+    background-position: center;
+    height: 300px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.headerImg {
+    height: 18.75rem;
+    width: 120rem;
+}
+
+/* first part home-page, animated lego // Sebastian */
+.container1 {
+    align-items: center;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    transition: transform 0.7s ease-out;
+}
+
+/* bounce animation red lego */
+.redBrick {
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-fill-mode: initial;
+    animation-iteration-count: 1;
+    animation-name: redBounce;
+    animation-timing-function: ease;
+    left: 0;
+    opacity: 0.5;
+    padding: 50px;
+    margin-top: 75px;
+    position: relative;
+}
+
+@keyframes redBounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-3.25rem);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-0.438rem);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+/* red lego wiggle, chained animation */
+.imgRedBrick {
+    animation-delay: 7s;
+    animation-duration: 3s;
+    animation-fill-mode: initial;
+    animation-iteration-count: 1;
+    animation-name: redWiggle;
+}
+
+@keyframes redWiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    85% {
+        transform: rotate(5deg);
+    }
+    95% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* red lego spin hover animation */
+.redBrick:hover {
+    opacity: 0.8;
+    transform: rotate(360deg);
+}
+
+.container2 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* green lego moving rigt to left animation */
+.greenBrick {
+    animation-delay: 6s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: rightToLeft;
+    animation-timing-function: linear;
+    opacity: 0.7;
+    padding: 20px;
+    position: relative;
+    margin-top: 75px;
+}
+
+@keyframes rightToLeft {
+    0%,
+    100% {
+        right: 0;
+    }
+    50% {
+        right: 60px;
+    }
+    /* green lego scaling with hover */
+}
+
+.greenBrick:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.imgGreenBrick {
+    animation-delay: 10s;
+    animation-duration: 4s;
+    animation-fill-mode: initial;
+    animation-iteration-count: 1;
+    animation-name: greenShake;
+    animation-timing-function: ease;
+}
+
+@keyframes greenShake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+h1 {
+    font-family: fjallaone, sans-serif;
+    font-size: 3.5rem;
+}
+
+p {
+    color: var(--light-pink);
+    font-family: quicksand, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 80px;
+}
+
+body {
+    background: linear-gradient(45deg, var(--black), var(--gray));
+    background-size: 2000%;
+    height: 100vh;
+    animation: bgGradient 15s infinite;
+    overflow-x: hidden;
+}
+
+@keyframes bgGradient {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+h1 {
+    font-family: fjallaone, sans-serif;
+    font-size: 3.5rem;
+}
+
+p {
+    margin-top: 80px;
+    color: var(--light-pink);
+    font-family: quicksand, sans-serif;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+nav {
+    height: 130px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--black);
+    box-shadow: 4px 4px 15px var(--orange);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    color: var(--orange);
+    font-family: fjallaone, sans-serif;
+    height: 110px;
+    width: 200px;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+.legorain {
+    position: relative;
+    overflow: hidden;
+}
+
+#brick1 {
+    position: absolute;
+    top: -300px;
+    left: 7%;
+    opacity: 0.7;
+    animation: brick1Fall 4s ease-in infinite;
+    animation-delay: 2s;
+}
+
+@keyframes brick1Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(-300deg);
+        opacity: 0;
+    }
+}
+
+#brick2 {
+    position: absolute;
+    top: -300px;
+    right: -1%;
+    opacity: 0.7;
+    animation: brick2Fall 3.7s ease-in infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes brick2Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(300deg);
+        opacity: 0;
+    }
+}
+
+#brick3 {
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    opacity: 0.1;
+    animation: brick3Fall 4s ease-in infinite;
+    animation-delay: 1s;
+}
+
+@keyframes brick3Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(-100deg);
+        opacity: 0;
+    }
+}
+
+#brick4 {
+    position: absolute;
+    top: -300px;
+    right: 22%;
+    opacity: 0.1;
+    animation: brick4Fall 4.2s ease-in infinite;
+    animation-delay: 2s;
+}
+
+@keyframes brick4Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(140deg);
+        opacity: 0;
+    }
+}
+
+#brick5 {
+    position: absolute;
+    top: -300px;
+    left: 40%;
+    opacity: 0.1;
+    animation: brick5Fall 4s ease-in infinite;
+    animation-delay: 1.8s;
+}
+
+@keyframes brick5Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(-150deg);
+        opacity: 0;
+    }
+}
+
+#brick6 {
+    position: absolute;
+    top: -300px;
+    left: -2%;
+    opacity: 0.7;
+    transform: scaleX(-1);
+    animation: brick6Fall 4.2s ease-in infinite;
+    animation-delay: 5s;
+}
+
+@keyframes brick6Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#brick7 {
+    position: absolute;
+    top: -300px;
+    right: 8%;
+    opacity: 0.7;
+    transform: scaleX(-1);
+    animation: brick7Fall 4s ease-in infinite;
+    animation-delay: 4.7s;
+}
+
+@keyframes brick7Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+#brick8 {
+    position: absolute;
+    top: -300px;
+    right: 30%;
+    opacity: 0.1;
+    transform: scaleX(-1);
+    animation: brick8Fall 4s ease-in infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes brick8Fall {
+    0% {
+        top: -600px;
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+#brick9 {
+    position: absolute;
+    top: -300px;
+    left: 20%;
+    opacity: 0.1;
+    transform: scaleX(-1);
+    animation: brick9Fall 4s ease-in infinite;
+    animation-delay: 0s;
+}
+
+@keyframes brick9Fall {
+    0% {
+        top: -1000px;
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        top: 120%;
+        transform: rotate(-270deg);
+        opacity: 0;
+    }
+}
+
+#legoBorder {
+    position: relative;
+    margin-top: 100px;
+    background-image: url(../img/border.png);
+    background-repeat: repeat-x;
+    width: 200vw;
+    height: 150px;
+    top: 80px;
+    animation: borderSlide linear 10s infinite;
+}
+
+@keyframes borderSlide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-197px, 0, 0);
+    }
+}
+
+#section {
+    background-color: rgb(12, 5, 0);
+}
+
+nav {
+    background-image: url(img/navbarBg.png);
+    display: block;
+    width: 100vw;
+}
+
+#navbarLogo {
+    margin-top: 5px;
+    height: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#firstParagraph {
+    padding-top: 50px;
+}
+
+#lastParagraph {
+    padding-bottom: 200px;
+}
+
+#socialsIcons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-80%);
+}
+
+.socialsIcons {
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.socialsIcons:hover {
+    transition: 0.3s;
+}
+
+#socialsFb {
+    background-image: url(../img/facebook.png);
+}
+
+#socialsFb:hover {
+    background-image: url(../img/facebookHover.png);
+}
+
+#socialsInsta {
+    background-image: url(../img/instagram.png);
+}
+
+#socialsInsta:hover {
+    background-image: url(../img/instagramHover.png);
+}
+
+#socialsTwitter {
+    background-image: url(../img/twitter.png);
+}
+
+#socialsTwitter:hover {
+    background-image: url(../img/twitterHover.png);
+}
+
+#socialsGh {
+    background-image: url(../img/github.png);
+}
+
+#socialsGh:hover {
+    background-image: url(../img/githubHover.png);
+}
+
+.navButtons {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+}
+
+.navButtons:hover {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+    cursor: pointer;
+}

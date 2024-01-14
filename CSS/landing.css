@@ -1,0 +1,76 @@
+:root {
+    --gray: rgb(54, 51, 51);
+    --black: rgb(39, 33, 33);
+    --orange: rgb(225, 100, 40);
+    --yellow: rgb(254, 207, 2);
+    --light-pink: rgb(246, 233, 233);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(./fonts/quicksand-Light.ttf);
+}
+
+@font-face {
+    font-family: fjallaone;
+    src: url(./fonts/fjallaOne-Regular.ttf);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+p {
+    color: var(--light-pink);
+    font-family: quicksand-Light;
+    font-size: 1.4rem;
+    margin: 0.1rem 3rem 1.6rem 1rem;
+}
+
+#landingContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/front_bg_high.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#transparentButton {
+    border: 2px solid yellow;
+    width: 15%;
+    height: 31%;
+    position: absolute;
+    top: 33%;
+    left: 39%;
+    opacity: 0;
+    border-radius: 140px;
+}
+
+#transparentButton:hover {
+    cursor: pointer;
+}
+
+#logoRightCorner {
+    position: absolute;
+    right: 5%;
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+
+#logoRightCorner:hover {
+    transform: scale(0.6);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
